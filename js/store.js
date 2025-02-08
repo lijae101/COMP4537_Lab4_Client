@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
         //Make POST request
         const xhr = new XMLHttpRequest();
         xhr.open("POST", "http://localhost:3000/api/definitions", true);
-        xhr.setRequestHeader("Content-Type", "application/json");
+        xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
 
         xhr.onreadystatechange = () => {
             if (xhr.readyState === 4) {
