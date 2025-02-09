@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     if (xhr.status === 201) {
                         storeMessage.innerText = response.message;
                     } else {
-                        storeMessage.innerText = "Request #" + response.reqNum + ""+response.message;
+                        storeMessage.innerText = "Request #" + response.reqNum + " "+response.message;
                     }
                 } catch (error) {
                     storeMessage.innerText = messages.serverError;
