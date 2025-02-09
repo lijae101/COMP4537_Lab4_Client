@@ -31,8 +31,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
         //Make POST request
         const xhr = new XMLHttpRequest();
-        xhr.open("POST", "http://localhost:3000/api/definitions", true);
-        xhr.setRequestHeader("Content-Type", "application/json");
+        xhr.open("POST", "https://octopus-app-28ybo.ondigitalocean.app/api/definitions", true);
+        xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
 
         xhr.onreadystatechange = () => {
             if (xhr.readyState === 4) {
@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     if (xhr.status === 201) {
                         storeMessage.innerText = response.message;
                     } else {
-                        storeMessage.innerText = response.message;
+                        storeMessage.innerText = "Request #" + response.reqNum + ""+response.message;
                     }
                 } catch (error) {
                     storeMessage.innerText = messages.serverError;
