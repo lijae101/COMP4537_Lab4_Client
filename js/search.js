@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         //Send AJAX call:
         const xmlHttp = new XMLHttpRequest();
-        const url = `http://localhost:3000/api/definitions?word=${encodeURIComponent(word)}`;
+        const url = `https://octopus-app-28ybo.ondigitalocean.app/api/definitions?word=${encodeURIComponent(word)}`;
         xmlHttp.open("GET", url, true);
         xmlHttp.onreadystatechange = () => {
             if (xmlHttp.readyState === 4) {

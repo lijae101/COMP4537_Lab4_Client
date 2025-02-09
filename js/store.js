@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         //Make POST request
         const xhr = new XMLHttpRequest();
-        xhr.open("POST", "http://localhost:3000/api/definitions", true);
+        xhr.open("POST", "https://octopus-app-28ybo.ondigitalocean.app/api/definitions", true);
         xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
 
         xhr.onreadystatechange = () => {
